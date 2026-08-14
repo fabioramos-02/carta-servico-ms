@@ -1,10 +1,20 @@
-"""Gera .docx da carta de servico em Arial 12 com hiperlinks clicaveis."""
+"""Gera .docx da carta de servico em Arial 12 com hiperlinks clicaveis.
+
+Uso:
+    python scripts/gerar_docx.py
+
+Le a carta refatorada em exemplos/saida/ e escreve o .docx no mesmo diretorio.
+Este script e um exemplo de conversao; a carta em si e produzida pelo agente
+carta-servico-ms em agents/.
+"""
+from pathlib import Path
 from docx import Document
-from docx.shared import Pt, RGBColor
+from docx.shared import Pt
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-OUT = r"C:\Users\framos\Documents\SETDIG\2026\Projetos\exemplo-carta-de-servico\carta-cartao-visitante-sistema-prisional.docx"
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "exemplos" / "saida" / "cartao-visitante-sistema-prisional.docx"
 
 FONT = "Arial"
 SIZE = 12
@@ -228,7 +238,7 @@ add_heading("Prazo", 2)
 add_para("30 dias úteis.")
 
 add_heading("Custos", 2)
-add_para("Gratuito.")
+add_para("Sem custo.")
 
 add_heading("Etapas", 2)
 
@@ -309,5 +319,6 @@ add_para_rich([
     ("text", "Agência Estadual de Administração do Sistema Penitenciário — AGEPEN", False),
 ])
 
-doc.save(OUT)
+OUT.parent.mkdir(parents=True, exist_ok=True)
+doc.save(str(OUT))
 print(f"OK -> {OUT}")
