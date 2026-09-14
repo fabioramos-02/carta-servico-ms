@@ -13,15 +13,23 @@ Base legal: **Lei Federal 15.263/2025** (linguagem simples), **Decreto Estadual 
 ├── agents/
 │   └── carta-servico-ms.md              # Subagent Claude Code
 ├── exemplos/
-│   ├── entrada/                         # Material bruto de exemplo
-│   │   └── cartao-visitante-sistema-prisional.md
-│   └── saida/                           # Carta refatorada + docx
-│       ├── cartao-visitante-sistema-prisional.md
-│       └── cartao-visitante-sistema-prisional.docx
+│   ├── entrada/                         # Material bruto (uma pasta por serviço)
+│   │   ├── cartao-visitante-sistema-prisional/
+│   │   │   └── cartao-visitante-sistema-prisional.md
+│   │   └── emitir-contracheque/
+│   │       └── emitir-contracheque.md
+│   └── saida/                           # Carta refatorada + docx (uma pasta por serviço)
+│       ├── cartao-visitante-sistema-prisional/
+│       │   ├── cartao-visitante-sistema-prisional.md
+│       │   └── cartao-visitante-sistema-prisional.docx
+│       └── emitir-contracheque/
+│           ├── emitir-contracheque.md
+│           └── emitir-contracheque.docx
 ├── manual/
 │   └── Manual_de_Carta_de_Servicos.pdf  # Referência metodológica (Gov Acre)
 ├── scripts/
-│   └── gerar_docx.py                    # Conversor md → docx (Arial 12, hiperlinks)
+│   ├── gerar_docx.py                    # Conversor docx AGEPEN (Arial 12, hiperlinks)
+│   └── gerar_docx_contracheque.py       # Conversor docx SAD Contracheque
 ├── CLAUDE.md                            # Instruções do projeto para Claude Code
 └── README.md
 ```
@@ -89,11 +97,28 @@ O script atual está parametrizado com o exemplo AGEPEN — adapte o conteúdo p
 
 ---
 
-## Exemplo incluído
+## Convenção de pastas
 
-- **Entrada:** `exemplos/entrada/cartao-visitante-sistema-prisional.md` — versão original do serviço "Solicitar Carteira de Visitante do Sistema Prisional" (AGEPEN MS)
-- **Saída:** `exemplos/saida/cartao-visitante-sistema-prisional.md` — versão refatorada nas 8 seções, em linguagem simples
-- **Saída docx:** `exemplos/saida/cartao-visitante-sistema-prisional.docx` — mesma carta em Word, Arial 12, hiperlinks funcionais
+Cada serviço fica em **pasta própria** dentro de `entrada/` e `saida/`:
+
+```
+exemplos/entrada/{slug-servico}/{slug-servico}.md
+exemplos/saida/{slug-servico}/{slug-servico}.md
+exemplos/saida/{slug-servico}/{slug-servico}.docx
+```
+
+Assim, prints, PDFs de referência e outros anexos do serviço ficam junto do `.md`, sem poluir a raiz.
+
+## Exemplos incluídos
+
+**1. Solicitar Carteira de Visitante do Sistema Prisional (AGEPEN MS)**
+- Entrada: `exemplos/entrada/cartao-visitante-sistema-prisional/cartao-visitante-sistema-prisional.md`
+- Saída: `exemplos/saida/cartao-visitante-sistema-prisional/cartao-visitante-sistema-prisional.md` (+ `.docx`)
+
+**2. Emitir Contracheque (SAD MS)**
+- Entrada: `exemplos/entrada/emitir-contracheque/emitir-contracheque.md`
+- Saída: `exemplos/saida/emitir-contracheque/emitir-contracheque.md` (+ `.docx`)
+- Piloto do padrão de dois canais (App MS Digital + Portal do Servidor). Replicável para os outros 6 serviços SAD.
 
 Comparativo:
 - Frases: 34 → 68 (todas ≤20 palavras)

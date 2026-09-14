@@ -14,7 +14,7 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "exemplos" / "saida" / "cartao-visitante-sistema-prisional.docx"
+OUT = ROOT / "exemplos" / "saida" / "cartao-visitante-sistema-prisional" / "cartao-visitante-sistema-prisional.docx"
 
 FONT = "Arial"
 SIZE = 12

@@ -18,10 +18,19 @@ Este repositório mantém o **agente Claude Code para construir Cartas de Servi�
 
 ## Ao criar novo exemplo
 
-- Entrada bruta em `exemplos/entrada/{slug-servico}.md`
-- Saída refatorada em `exemplos/saida/{slug-servico}.md`
-- Se gerar `.docx`, colocar em `exemplos/saida/{slug-servico}.docx`
-- Slug: kebab-case, sem "carta-" prefixo (a pasta já indica o tipo)
+Cada serviço vive em **pasta própria** dentro de `entrada/` e `saida/`, com o slug repetido no nome do arquivo:
+
+```
+exemplos/
+├── entrada/{slug-servico}/{slug-servico}.md
+└── saida/{slug-servico}/
+    ├── {slug-servico}.md
+    └── {slug-servico}.docx
+```
+
+- Slug: kebab-case, sem prefixo "carta-" (a pasta já indica o tipo)
+- Ativos adicionais do serviço (prints, PDFs de referência, fluxogramas) ficam ao lado do `.md` na mesma pasta
+- Ao gerar `.docx`, criar um script dedicado em `scripts/gerar_docx_{slug}.py` até o conversor ser generalizado
 
 ## Ao gerar `.docx`
 
