@@ -142,8 +142,7 @@ add_heading("O QUE É?", 2)
 add_para(
     "Serviço on-line em que o servidor público estadual consulta e baixa o demonstrativo "
     "mensal de pagamento (contracheque). Você acessa pelo aplicativo MS Digital ou pelo Portal "
-    "do Servidor, no navegador. O contracheque fica disponível assim que a Secretaria de Estado "
-    "de Administração — SAD fecha a folha de pagamento."
+    "do Servidor, no navegador."
 )
 
 add_heading("Exigências", 2)
@@ -164,10 +163,10 @@ add_heading("Quem pode utilizar?", 2)
 add_para("Servidor público estadual com vínculo ativo no Governo de Mato Grosso do Sul.")
 
 add_heading("Prazo", 2)
-add_para("Imediato após o login.")
+add_para("Imediato.")
 
 add_heading("Custos", 2)
-add_para("Sem custo.")
+add_para("Sem custos")
 
 add_heading("Etapas", 2)
 
@@ -242,26 +241,9 @@ add_bullet([
     ("text", " / ", False),
     ("link", "https://apps.apple.com/br/app/ms-digital/id1482970942", "App Store"),
 ])
-add_bullet([("text", "Telefone / e-mail SAD: [FALTA: canal de atendimento não informado no material]", False)])
-
 add_para_rich([("text", "Esqueceu a senha?", True)])
 add_bullet([
     ("link", "https://www.portaldoservidor.ms.gov.br/SenhaDeAcesso/EsqueciMinhaSenha", "Recuperar senha do Portal do Servidor"),
-])
-
-add_para_rich([("text", "Legislação:", True)])
-add_bullet([
-    ("link", "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm", "Lei Federal 13.460, de 26 de junho de 2017 — Código de Defesa do Usuário do Serviço Público"),
-])
-add_bullet([
-    ("link", "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm", "Lei Federal 15.263, de 2025 — linguagem simples no serviço público"),
-])
-add_bullet([("text", "[VERIFICAR: Decreto Estadual 16.744/2026 (MS) — link oficial]", False)])
-add_bullet([("text", "[FALTA: portaria SAD sobre contracheque digital, se houver]", False)])
-
-add_para_rich([
-    ("text", "Órgão responsável: ", True),
-    ("text", "Secretaria de Estado de Administração — SAD", False),
 ])
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
