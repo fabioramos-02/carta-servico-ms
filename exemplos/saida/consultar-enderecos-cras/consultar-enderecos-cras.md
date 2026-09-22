@@ -12,10 +12,10 @@ Serviço on-line em que você consulta o endereço, telefone e e-mail dos Centro
 Qualquer cidadão que precise localizar um CRAS em Mato Grosso do Sul.
 
 ## Prazo
-Imediato.
+Imediato
 
 ## Custos
-Sem custos.
+Sem custos
 
 ## Etapas
 

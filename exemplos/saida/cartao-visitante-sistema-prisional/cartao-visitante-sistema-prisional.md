@@ -38,7 +38,7 @@ Você pode visitar se for parente até o segundo grau da pessoa presa: pai, mãe
 30 dias úteis.
 
 ## Custos
-Sem custo.
+Sem custos
 
 ## Etapas
 

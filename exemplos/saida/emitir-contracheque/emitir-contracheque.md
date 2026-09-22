@@ -13,7 +13,7 @@ Serviço on-line em que o servidor público estadual consulta e baixa o demonstr
 Servidor público estadual com vínculo ativo no Governo de Mato Grosso do Sul.
 
 ## Prazo
-Imediato.
+Imediato
 
 ## Custos
 Sem custos

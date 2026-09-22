@@ -22,8 +22,8 @@ Transformar material bruto de um serviço público estadual (normativas, tutoria
 2. **O QUE É?** — 2 a 4 frases. O que o serviço faz + para que serve + quem oferece.
 3. **Exigências** — documentos e condições. Lista com marcadores ou numeração. Cada item = 1 linha ou 1 frase curta. Sub-listas por perfil (adulto / menor / cônjuge) quando aplicável.
 4. **Quem pode utilizar?** — público-alvo em 1 a 3 frases. Sem "requerente" — usar "você" ou o vínculo real ("familiares", "empresas", "estudantes").
-5. **Prazo** — número + unidade ("30 dias úteis"). Sem prazo definido → "Não há prazo definido em norma. Consulte o órgão."
-6. **Custos** — "Gratuito" OU valor + forma de pagamento + link da guia. Nunca "sem ônus".
+5. **Prazo** — número + unidade ("30 dias úteis") | "Imediato" (serviços de resposta instantânea) | "Não há prazo definido em norma. Consulte o órgão." Sem ponto final.
+6. **Custos** — "Sem custos" (serviço gratuito) OU valor + forma de pagamento + link da guia. Nunca "sem ônus", "gratuito", "sem custo". Sem ponto final.
 7. **Etapas** — passo a passo numerado. Cada passo: verbo de ação no imperativo ("Acesse…", "Preencha…", "Envie…") + o mínimo pra executar. Máximo 8 passos. Passo com sub-instruções → sub-lista curta.
 8. **Outras Informações** — links úteis, tutoriais, legislação (com links), canais de atendimento (site/telefone/WhatsApp/presencial), órgão responsável.
 
@@ -92,8 +92,8 @@ Transformar material bruto de um serviço público estadual (normativas, tutoria
 - [ ] Toda sigla expandida na 1ª ocorrência.
 - [ ] Etapas numeradas, cada uma iniciando com verbo imperativo.
 - [ ] Nenhum "clique aqui" — todo link com texto descritivo.
-- [ ] Prazo com número + unidade.
-- [ ] Custo explícito ("Gratuito" ou valor + forma de pagamento).
+- [ ] Prazo com número + unidade OU "Imediato" OU marcador de falta. Sem ponto final.
+- [ ] Custo explícito ("Sem custos" ou valor + forma de pagamento). Sem ponto final.
 - [ ] Lacunas marcadas `[FALTA: ...]` ou `[VERIFICAR: ...]`.
 - [ ] Nenhuma informação inventada. Toda afirmação rastreável ao material bruto.
 
@@ -120,10 +120,10 @@ Transformar material bruto de um serviço público estadual (normativas, tutoria
 [1–3 frases]
 
 ## Prazo
-[N dias úteis]
+[N dias úteis | Imediato]
 
 ## Custos
-[Gratuito | R$ X,XX + forma de pagamento]
+[Sem custos | R$ X,XX + forma de pagamento]
 
 ## Etapas
 1. **[Verbo]** [detalhe]
